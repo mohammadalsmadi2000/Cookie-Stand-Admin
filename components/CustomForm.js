@@ -1,9 +1,10 @@
 import { useState } from "react";
 import CustomInput from "./CustomInput";
-
+import {data} from "../data.js"
 export default function CustomForm({handelData}) {
     const [objStae, setObjState] = useState({ "Minimum Customers per Hour": 0, "Maximum Customers per Hour": 0, "Average Cookies Per Sale": 0 })
     const [makeChange,setMakeChange]=useState(false)
+    const hourly_sales=data
     
     function handelChangeFromChild(stateFromChild){
         console.log("done")
