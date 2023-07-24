@@ -1,6 +1,7 @@
 import CustomForm from "@/components/CustomForm"
 import Footer from "@/components/Footer"
 import Header from "@/components/Header"
+import PlaceholderComponent from "@/components/PlaceholderComponent"
 import Head from "next/head"
 import { useState } from "react"
 export default function Home() {
@@ -39,14 +40,12 @@ export default function Home() {
           <div style={{ height: 300, width: 800, backgroundColor: "#86eeac", borderRadius: 9 }}>
             <CustomForm handelData={handelData} />
             {haveData && <div> <br />
-              <br />
-              Minimum Customers  per Hour : {data["Minimum Customers per Hour"]}
-              <br />
-              Maximum Customers  per Hour : {data["Maximum Customers per Hour"]}
+              <PlaceholderComponent data={data} />
+
               <br />
 
 
-              Average Cookies Per Sale : {data["Average Cookies Per Sale"]}
+
             </div>
             }
           </div>
